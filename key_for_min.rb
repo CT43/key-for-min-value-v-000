@@ -3,10 +3,12 @@
 
 def key_for_min_value(name_hash)
   lowest = 99999999
+  new_hash = []
   name_hash.collect do |key, value|
     if value < lowest
-      lowest = value
-      key
+      lowest == value
+      new_hash = [key]
     end
   end
+  new_hash
 end
