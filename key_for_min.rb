@@ -4,7 +4,7 @@
 def key_for_min_value(name_hash)
   lowest = 99999999
   new_hash = []
-  name_hash.collect do |key, value|
+  name_hash.each do |key, value|
     if value < lowest
       lowest == value
       new_hash = [key]
